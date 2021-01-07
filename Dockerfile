@@ -13,4 +13,4 @@ RUN apk add --no-cache ca-certificates
 COPY --from=builder /go-ethereum/build/bin/geth /usr/local/bin/
 
 EXPOSE 8545 8546 30303 30303/udp
-ENTRYPOINT ["geth", "--http", "--http.addr", "0.0.0.0", "--rpcvhosts=*", "--rpc", "--rpcaddr", "0.0.0.0" "--rpcapi", "personal,db,eth,net,web3"]
+ENTRYPOINT ["geth", "--http", "--http.addr", "0.0.0.0", "--rpcvhosts=*", "--rpc", "--rpcaddr", "0.0.0.0", "--rpcapi", "personal,db,eth,net,web3"]
